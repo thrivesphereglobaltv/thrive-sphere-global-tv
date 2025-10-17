@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ThriveSphere Global TV — Inspiring Global Balance</title>
+  <meta name="description" content="ThriveSphere Global TV — a YouTube channel and personal brand that inspires global audiences to live balanced, healthy, and meaningful lives. Explore videos, projects, and the founder's portfolio in data analysis & graphic design." />
+  <meta name="keywords" content="ThriveSphere, health, productivity, personal growth, data analysis, graphic design, YouTube" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CDN - useful for rapid prototyping (replace with a build step for production) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- SEO/open graph -->
+  <meta property="og:title" content="ThriveSphere Global TV — Inspiring Global Balance">
+  <meta property="og:description" content="A channel and brand focused on health awareness, productivity, and personal growth.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://placehold.co/1200x630?text=ThriveSphere+Global+TV">
+</head>
+<body class="bg-white text-slate-800 font-sans antialiased">
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-3" aria-label="ThriveSphere Global TV home">
+          <div class="logo flex items-center justify-center w-11 h-11 rounded-md shadow-sm">
+            <!-- Logo initials -->
+            <span class="text-white font-bold">TS</span>
+          </div>
+          <div class="leading-tight">
+            <div class="text-lg font-semibold">ThriveSphere</div>
+            <div class="text-sm text-slate-500">Global TV</div>
+          </div>
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About & Portfolio</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="https://youtube.com/@thrivesphereglobal?si=5IwSIPf4_Ii4OJVh" class="btn-primary" id="yt-cta" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="menu-toggle" aria-label="Toggle menu" class="p-2 rounded-md hover:bg-slate-100">
+            <svg id="menu-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+            </svg>
+            <svg id="menu-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile nav panel -->
+    <div id="mobile-nav" class="md:hidden hidden border-t border-slate-100">
+      <div class="px-4 py-4 space-y-3">
+        <a href="index.html" class="block text-slate-700">Home</a>
+        <a href="about.html" class="block text-slate-700">About & Portfolio</a>
+        <a href="#contact" class="block text-slate-700">Contact</a>
+        <a href="https://youtube.com/@thrivesphereglobal?si=5IwSIPf4_Ii4OJVh" id="mobile-yt" class="block btn-primary" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Hero -->
+    <section class="pt-6 pb-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div>
+          <p class="text-sm text-gold-600 font-semibold mb-2 animate-slide-up">ThriveSphere Global TV</p>
+          <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-4 animate-fade-in">Inspiring Global Balance</h1>
+          <p class="text-slate-600 mb-6 max-w-xl animate-fade-in delay-100">
+            We create practical, science-informed content about health awareness, productivity, and personal growth.
+            Hosted by a Chief Medical Laboratory Scientist and data-driven storyteller — our videos blend evidence, design, and real-life tips to help you live a more balanced, meaningful life.
+          </p>
+
+          <div class="flex flex-wrap gap-3">
+            <!-- YouTube channel URL (wired in script.js as well) -->
+            <a id="cta-yt" href="https://youtube.com/@thrivesphereglobal?si=5IwSIPf4_Ii4OJVh" class="btn-primary" target="_blank" rel="noopener noreferrer">Visit our YouTube channel</a>
+            <a href="about.html" class="btn-ghost">About & Portfolio</a>
+          </div>
+        </div>
+
+        <!-- Featured / Latest video -->
+        <aside class="space-y-4">
+          <div class="rounded-lg border border-slate-100 overflow-hidden shadow-sm animate-fade-in">
+            <!-- Sample embedded video - replace FEATURED_VIDEO_ID in script.js to update -->
+            <div class="video-wrap aspect-video bg-slate-900">
+              <iframe id="featured-video" class="w-full h-full" src="https://www.youtube.com/embed/ysz5S6PUM-U" title="Featured video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold">Featured Episode — Balanced Days</h3>
+              <p class="text-sm text-slate-500 mt-1">Short, practical strategies for building daily balance and focus.</p>
+              <div class="mt-3">
+                <a href="https://youtube.com/@thrivesphereglobal?si=5IwSIPf4_Ii4OJVh" class="text-sm font-medium text-deep-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Watch on YouTube →</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3 text-sm text-slate-500">
+            Subscribe for new episodes every week. Replace the sample video with your latest upload by changing the iframe video ID in script.js.
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Latest Videos -->
+    <section id="videos" class="mt-8">
+      <h2 class="text-xl font-semibold mb-3 animate-slide-up">Latest Videos</h2>
+      <p class="text-sm text-slate-600 mb-4">Quick access to recent content — click a thumbnail to view on YouTube.</p>
+
+      <!-- Video thumbnails grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        <!-- Replace VIDEO_ID_x with your channel's video IDs; first item is a sample ID embedded above -->
+        <a class="video-card" href="https://www.youtube.com/watch?v=ysz5S6PUM-U" target="_blank" rel="noopener noreferrer" aria-label="Video 1">
+          <img src="https://i.ytimg.com/vi/ysz5S6PUM-U/hqdefault.jpg" alt="Video thumbnail 1" class="w-full h-36 object-cover rounded-md">
+          <div class="mt-2 text-sm font-medium">Balanced Morning Routine</div>
+        </a>
+
+        <a class="video-card" href="https://youtube.com/@thrivesphereglobal?si=5IwSIPf4_Ii4OJVh" target="_blank" rel="noopener noreferrer" aria-label="Channel">
+          <img src="https://placehold.co/480x270?text=Video+2" alt="Video thumbnail 2" class="w-full h-36 object-cover rounded-md">
+          <div class="mt-2 text-sm font-medium">Nutrition Tips for Busy People</div>
+        </a>
+
+        <a class="video-card" href="https://youtube.com/@thrivesphereglobal?si=5IwSIPf4_Ii4OJVh" target="_blank" rel="noopener noreferrer" aria-label="Channel">
+          <img src="https://placehold.co/480x270?text=Video+3" alt="Video thumbnail 3" class="w-full h-36 object-cover rounded-md">
+          <div class="mt-2 text-sm font-medium">Data-Driven Habits</div>
+        </a>
+
+        <a class="video-card" href="https://youtube.com/@thrivesphereglobal?si=5IwSIPf4_Ii4OJVh" target="_blank" rel="noopener noreferrer" aria-label="Channel">
+          <img src="https://placehold.co/480x270?text=Video+4" alt="Video thumbnail 4" class="w-full h-36 object-cover rounded-md">
+          <div class="mt-2 text-sm font-medium">Behind the Scenes — Design & Data</div>
+        </a>
+      </div>
+
+      <div class="mt-6">
+        <a class="text-deep-blue-600 font-semibold hover:underline" href="https://youtube.com/@thrivesphereglobal?si=5IwSIPf4_Ii4OJVh" id="more-on-yt" target="_blank" rel="noopener noreferrer">View more on YouTube →</a>
+      </div>
+    </section>
+
+    <!-- Quick features -->
+    <section class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div class="feature-card animate-fade-in">
+        <h4 class="font-semibold">Science-first</h4>
+        <p class="text-sm text-slate-600 mt-1">Evidence-based recommendations from a medical laboratory professional.</p>
+      </div>
+      <div class="feature-card animate-fade-in delay-100">
+        <h4 class="font-semibold">Data-driven</h4>
+        <p class="text-sm text-slate-600 mt-1">Analytics and clear visual storytelling to explain complex topics.</p>
+      </div>
+      <div class="feature-card animate-fade-in delay-200">
+        <h4 class="font-semibold">Beautiful design</h4>
+        <p class="text-sm text-slate-600 mt-1">Clean branding and impactful visuals to support your message.</p>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section id="contact" class="mt-12 rounded-lg border border-slate-100 p-6 bg-gradient-to-b from-white to-slate-50">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div>
+          <h3 class="text-lg font-semibold">Work with us or say hello</h3>
+          <p class="text-sm text-slate-600 mt-1">For collaborations, data projects, or design inquiries — get in touch.</p>
+        </div>
+        <div class="flex gap-3">
+          <a href="mailto:professional@example.com" class="btn-primary">professional@example.com</a>
+          <a href="about.html#contact" class="btn-ghost">More contact options</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mt-12 text-center text-sm text-slate-500 pb-8">
+      © <span id="year">2025</span> ThriveSphere Global TV · Built with intention — health, data, and design.
+    </footer>
+  </main>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
