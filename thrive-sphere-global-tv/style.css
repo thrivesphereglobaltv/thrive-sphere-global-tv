@@ -1,0 +1,133 @@
+/* style.css
+   Custom styles and small utilities that complement Tailwind.
+   Color scheme: white background, deep blue accents, gold highlights.
+   Mobile-first and easy to customize.
+*/
+
+/* Root custom colors for convenience */
+:root{
+  --deep-blue: #0b3d91;   /* primary deep blue accent */
+  --gold: #d4af37;        /* gold highlight */
+  --muted: #6b7280;       /* neutral muted text */
+}
+
+/* Basic setup */
+body, button, input, textarea {
+  font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Logo styling */
+.logo {
+  background: linear-gradient(180deg, var(--deep-blue) 0%, #08357a 100%);
+  color: white;
+  border-radius: 8px;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(11,61,145,0.12);
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: var(--deep-blue);
+  color: #fff;
+  padding: .55rem .9rem;
+  border-radius: .5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform .14s ease, box-shadow .14s ease;
+  box-shadow: 0 6px 18px rgba(11,61,145,0.08);
+}
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(11,61,145,0.12); }
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: transparent;
+  color: var(--deep-blue);
+  padding: .45rem .75rem;
+  border-radius: .5rem;
+  border: 1px solid rgba(11,61,145,0.08);
+  font-weight: 600;
+  text-decoration: none;
+}
+.btn-ghost:hover { background: rgba(11,61,145,0.03); }
+
+/* Navigation links */
+.nav-link {
+  color: #0f1724;
+  text-decoration: none;
+  font-weight: 600;
+}
+.nav-link:hover { color: var(--deep-blue); }
+
+/* Feature card */
+.feature-card {
+  background: white;
+  border-radius: .6rem;
+  padding: 1rem;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 6px 14px rgba(2,6,23,0.03);
+}
+
+/* Video card */
+.video-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.video-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(2,6,23,0.06); }
+
+/* Project card */
+.project-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.project-card:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(2,6,23,0.06); }
+
+/* Social icon buttons */
+.social-icon {
+  color: var(--deep-blue);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .35rem;
+  border-radius: .35rem;
+  transition: transform .12s ease, background .12s ease;
+}
+.social-icon:hover { transform: translateY(-3px); background: rgba(11,61,145,0.05); }
+
+/* Small utilities for animation helpers (used by script.js) */
+.animate-fade-in { opacity: 0; transform: translateY(6px); transition: opacity .6s ease, transform .6s ease; }
+.animate-slide-up { opacity: 0; transform: translateY(12px); transition: opacity .6s cubic-bezier(.16,.84,.44,1), transform .6s cubic-bezier(.16,.84,.44,1); }
+.delay-100 { transition-delay: .08s; }
+.delay-200 { transition-delay: .14s; }
+
+/* Once revealed, these classes become visible */
+.revealed { opacity: 1 !important; transform: none !important; }
+
+/* Footer small responsive tweaks */
+footer { color: var(--muted); }
+
+/* Utility: gold text */
+.text-gold-600 { color: var(--gold); }
+
+/* Deep blue text */
+.text-deep-blue-600 { color: var(--deep-blue); }
+
+/* Small screens: ensure embedded video keeps aspect ratio if not using aspect-video utilities */
+.video-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+.video-wrap iframe, .video-wrap video { position: absolute; top:0; left:0; width:100%; height:100%; }
+
+/* Accessibility focus states */
+a:focus, button:focus { outline: 3px solid rgba(11,61,145,0.12); outline-offset: 3px; }
+
+/* Small responsiveness if Tailwind not loaded for some reason */
+@media (max-width:640px) {
+  .logo { width: 44px; height: 44px; }
+}
